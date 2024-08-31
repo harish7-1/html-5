@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEAF</title>
+</head>
+<body>
+    <canvas id="leaf" height="500" width="500" style="border: 4px solid black;"></canvas>
+
+    <script>
+        let leaf = document.getElementById("leaf").getContext("2d");
+        
+        //rectangle
+        leaf.fillStyle="blue";
+        leaf.fillRect(150,300,200,100);
+
+
+        // Green leaf
+        leaf.beginPath();
+        leaf.arc(200,300,100,-70,Math.PI,true);
+        leaf.fillStyle="green";
+        leaf.lineTo(200,300);
+        leaf.fill();
+
+        leaf.beginPath();
+        leaf.arc(200,200,100,0,Math.PI/2,false);
+        leaf.fillStyle="green";
+        leaf.lineTo(200,200);
+        leaf.fill();
+
+
+        //red leaf
+        leaf.beginPath();
+        leaf.arc(250,200,100,-70,Math.PI,true);
+        leaf.fillStyle="red";
+        leaf.lineTo(250,200);
+        leaf.fill();
+
+        leaf.beginPath();
+        leaf.arc(250,100,100,0,Math.PI/2,false);
+        leaf.fillStyle="red";
+        leaf.lineTo(250,100);
+        leaf.fill();
+
+    </script>
+    
+</body>
+</html>
+
+

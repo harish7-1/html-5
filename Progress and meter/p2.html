@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meter TAG..!</title>
+    <style>
+        meter{
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <center>
+        <h1>meter TAG..!</h1>
+        <p>The meter element represents a scalar measurement within a known range, or a fractional value; for example disk usage, the relevance of a query result, or the fraction of a voting population to have selected a particular candidate</p> 
+
+    </center>
+    <hr>
+    <h3>Default meter tag..!</h3>
+    <meter></meter>
+    <hr>
+
+    <h3>Static meter tag..!</h3>
+    <meter min="1" max="100" value="70"></meter>
+    <meter min="1" max="100" value="30"></meter>
+    <meter min="1" max="100" value="90"></meter>
+
+    <h3>Dynamic meter tag..!</h3>
+    <meter min='1' max="100" id="meter"></meter>
+    <p><span id="meter-text">0</span>%complete...</p>
+    
+    <script>
+        let minScript = 1;
+
+        function startmeter()
+        {
+            let meter = document.getElementById('meter');
+            let meterText = document.getElementById('meter-text');
+
+            if(minScript < 100)
+        {
+            minScript++;
+            meter.value = minScript;
+            meterText.textContent = minScript;
+        }
+              }
+        setInterval('startmeter()',1000);
+        
+    </script>
+</body>
+</html>
